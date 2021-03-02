@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+     
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+ 
+ 
+     <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyCg2wO-V7V1U44By4-xWlFDVznoQIUultg",
+          authDomain: "tbiweb.firebaseapp.com",
+          projectId: "tbiweb",
+          storageBucket: "tbiweb.appspot.com",
+          messagingSenderId: "674478665547",
+          appId: "1:674478665547:web:f8413ddcb547f9f998c2ce",
+          measurementId: "G-JQTLQ7JPTX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+      </script> 
+    <title>TBI.com</title>
+</head>
+
+<body id="mySearch">
+
+    <!----navigationb ar---->
+    <section id="nave-bar">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#"><img src="https://cdn.tbi.co.id/asset-tbi/img/logo.jpg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">about us</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">services</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">our team</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricce">fee structure</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">testimonial</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">contact</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#link">Link</a>
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" tabindex="-1" aria-disabled="true"><button
+                                class="login">LogIn</button></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" onkeyup="mySearch()" id="myInput" title="Type in a name"
+                        type="search" placeholder="Search" aria-label="Search">
+                    <!-- <button onclick="mySearch()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                </form>
+            </div>
+
+
+
+
+
+        </nav>
+    </section>
+    <!------slider----->
+    <div id="------slider-----">
+        <div id="headerslider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#headerslider" data-slide-to="0" class="active"></li>
+                <li data-target="#headerslider" data-slide-to="1"></li>
+                <li data-target="#headerslider" data-slide-to="2"></li>
+                <li data-target="#headerslider" data-slide-to="3"></li>
+                <li data-target="#headerslider" data-slide-to="4"></li>
+                <li data-target="#headerslider" data-slide-to="5"></li>
+                <li data-target="#headerslider" data-slide-to="6"></li>
+                <li data-target="#headerslider" data-slide-to="7"></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/slider1.jpg">
+                    <div class="carousel-caption">
+                        <h5>Spoken English</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/TBIslider2.png" class="pictures"
+                        style="background-color: rgb(173, 173, 173);">
+                    <div class="carousel-caption">
+                        <h5>Web development</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/pic7.jpg">
+                    <div class="carousel-caption">
+                        <h5>App development</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider1.jpg">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider2.jpg">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider3.jpg">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider4.jpg">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/slider7.jpg">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/imtiazslider.jpg">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#headerslider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#headerslider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!----About----->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>ABOUT US</h1>
+                    <div class="about-content">
+
+                        (THE BRITISH INSTITUTE ) was established since 2008 TBI has imparted high quality education in
+                        term of The British Institute, known as TBI,
+                        since then has provided first-rate classroom tuition and excellent quality of education, TBI is
+                        one of the Pakistan’s best known &The most experienced English language learning centre with
+                        great choice of study program specifically designed according to students needs & demands.<span
+                            id="dots">...</span><span id="more">
+                            <p> 1)English Language,</p>
+                            <p>2)Computer Courses,</p>
+                            <p> 3)Mobile Repairing</p>
+                            <p>4)Laptop Repairing</p>
+                            <p>5)Call Center Training Course</p>
+                        </span>
+                    </div>
+                    <button type="button" onclick="readMore()" id="readMoreBtn" class="btnmore">Reade>></button>
+                </div>
+
+                <div class="col-md-6">
+                    <p>adobe photoshop</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%">80%</div>
+                    </div>
+                    <p>English Language</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%">75%</div>
+                    </div>
+                    <p>Call Center Training Course</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 65%">65%</div>
+                    </div>
+                    <p>graphics designing</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 50%">50%</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ------sernices------- -->
+    <section id="services">
+        <div class="container">
+            <h1>Our Courses</h1>
+            <div class="row services">
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <h3>Computer Courses</h3>
+                    <p>“Our aim is to empower you with the powerful weapon of computer science by offering some
+                        excellent computer courses. They will enhance your skill set and lead to countless bright career
+                        prospects. You can also opt for a completely new course that would
+                        lead to global career opportunities in the world of Information Technology.
+
+                        ”
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-tablet"></i>
+                    </div>
+                    <h3>Mobile Repairing</h3>
+                    <p>“The Mobile Phone Repairing Course has been designed to provide you professional knowledge and
+                        skills for repairing, installing and upgrading or downgrading mobile hardware of all the leading
+                        mobile phone manufacturers. You can perform all kinds of mobile phone hardware fixing work. ”
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <h3>English language</h3>
+                    <p>“We have over 14 years of expertise in English language education and reach over many
+                        learners a year. Designed by experts, our online/onsite English classes and courses provide a
+                        safe and
+                        inclusive learning community in which to grow and develop your English communication skills.”
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-paint-brush"></i>
+                    </div>
+                    <h3>graphics designing</h3>
+                    <p>“Graphic designers create visual concepts that inspire, inform, and transform. Learn how to use
+                        industry-leading software to build innovative design projects,
+                        Graphic Design. Visual communication and problem-solving through the use of typography,
+                        photography, illustration, and more.”
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- -----------team members---------- -->
+    <section id="team">
+        <div class="container">
+            <h1>our team</h1>
+            <div class="row">
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                        <img src="img/imtiaz.jpg" clss="img-responsive" alt="smart picture" width="300" height="400">
+                        <ul>
+                            <a href="https://www.facebook.com/">
+                                <li><i class="fa fa-facebook-official"></i></li>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/">
+                                <li><i class="fa fa-instagram"></i></li>
+                            </a>
+                            <a href="https://twitter.com/login">
+                                <li><i class="fa fa-twitter"></i></li>
+                            </a>
+                            <a href="https://web.whatsapp.com/">
+                                <li><i class="fa fa-whatsapp"></i></li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <h2>Sir Imtiaz Ahmed</h2>
+                    <h3>Operation Manager</h3>
+                    <p>Master in English Literature</p>
+                </div>
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                        <img src="img/sara.jpg" clss="img-responsive" alt="smart picture" width="300" height="400">
+                        <ul>
+                            <a href="https://www.facebook.com/">
+                                <li><i class="fa fa-facebook-official"></i></li>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/">
+                                <li><i class="fa fa-instagram"></i></li>
+                            </a>
+                            <a href="https://twitter.com/login">
+                                <li><i class="fa fa-twitter"></i></li>
+                            </a>
+                            <a href="https://web.whatsapp.com/">
+                                <li><i class="fa fa-whatsapp"></i></li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <h2>Miss Hina</h2>
+                    <h3>Master in English</h3>
+                    <p>English language teacher</p>
+                </div>
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                        <img src="img/alean.jpg" clss="img-responsive" alt="smart picture" width="300" height="400">
+                        <ul>
+                            <a href="https://www.facebook.com/">
+                                <li><i class="fa fa-facebook-official"></i></li>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/">
+                                <li><i class="fa fa-instagram"></i></li>
+                            </a>
+                            <a href="https://twitter.com/login">
+                                <li><i class="fa fa-twitter"></i></li>
+                            </a>
+                            <a href="https://web.whatsapp.com/">
+                                <li><i class="fa fa-whatsapp"></i></li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <h2> Miss Javeria</h2>
+                    <h3>Graphics Designer</h3>
+                    <p>welcome to our website</p>
+                </div>
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                        <img src="img/ssaif.jpg" clss="img-responsive" alt="smart picture" width="300" height="400">
+                        <ul>
+                            <a href="#">
+                                <li><i class="fa fa-facebook-official"></i></li>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/">
+                                <li><i class="fa fa-instagram"></i></li>
+                            </a>
+                            <a href="https://twitter.com/login">
+                                <li><i class="fa fa-twitter"></i></li>
+                            </a>
+                            <a href="https://web.whatsapp.com/">
+                                <li><i class="fa fa-whatsapp"></i></li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <h2>Engr Saifullah</h2>
+                    <h3> Web developer</h3>
+                    <p>Bs in telecommunication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -----------------promo-------------------- -->
+    <section id="promo">
+        <div class="container">
+            <p>Visit our campus or contact with us by clicking the contact button</p>
+            <a href="#contact" class="btncontact">Contact us</a>
+        </div>
+    </section>
+    <!-- --------------price plans----------------- -->
+    <section id="pricce">
+        <div class="container">
+            <h1>RULES OF PAYMENT</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-price">
+                        <div class="price-head">
+                            <h2>REGISTRATION</h2>
+                            <p>ADMISSION PROCEDURE AT<span>TBI</span></p>
+                        </div>
+                        <div class="Price-content">
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i>Parents wishing to admit a child should first
+                                    register for an admission test,</li>
+                                <li><i class="fa fa-check-circle"></i>by completing the admission form at the school
+                                    office
+                                    and taking an appointment card for the test and interview.</li>
+                                <li><i class="fa fa-times-circle"></i>It is subject to getting through an admission
+                                    test/ interview and availability of the seat.</li>
+                                <li><i class="fa fa-times-circle"></i>A candidate caught cheating during the admission
+                                    test will be rejected.</li>
+                                <li><i class="fa fa-times-circle"></i>The papers are not set from any specific textbooks
+                                    or syllabus but are of a general nature designed to test the aptitude of the child
+                                    in the basic subjects.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-price">
+                        <div class="price-head">
+                            <h2>RULES OF PAYMENT</h2>
+                            <p>Parents have the option to pay the fee for the whole year as a lump
+                                sum./<span>Month</span></p>
+                        </div>
+                        <div class="Price-content">
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i> A)
+                                    Registration Fee Non-refundable</li>
+                                <li><i class="fa fa-check-circle"></i> B)
+                                    Admission Fee Non-refundable</li>
+                                <li><i class="fa fa-times-circle"></i>C)
+                                    Security Fee Refundable</li>
+                                <li><i class="fa fa-times-circle"></i> D)
+                                    Tuition Fee Payable every month</li>
+                                <li><i class="fa fa-times-circle"></i>E
+                                    Computer Fee Payable every month</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-price">
+                        <div class="price-head">
+                            <h2>ADMISSION FORMALITIES</h2>
+                            <p>Parents fill in the admission form and pay the registration fees/
+                                <span>once</span></p>
+                        </div>
+                        <div class="Price-content">
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i>Test and interview with both the parents are on
+                                    the specified date
+                                    Result is finalised within a week of the test & displayed on the notice board. </li>
+                                <li><i class="fa fa-check-circle"></i>Parents are informed about further formalities.
+                                </li>
+                                <li><i class="fa fa-times-circle"></i>The documents to be attached with the Admission
+                                    Form include</li>
+                                <li><i class="fa fa-times-circle"></i>2 recent passport size photographs
+                                    2 self-addressed envelopes
+                                </li>
+                                <li><i class="fa fa-times-circle"></i>Attested photocopy of Birth Certificate
+                                    Report card from last school</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- --------------------------testimonials-------------------------- -->
+    <section id="testimonials">
+        <div class="container">
+            <h1>Testimonials</h1>
+            <p class="text-center">Visit our campus or contact with us</p>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="profile">
+                        <img src="img/imtiaz.jpg" alt="" class="user">
+                        <blockquote>Websites promote you 24/7: No employee will do that. Our aim is to empower you with
+                            the powerful weapon of computer science by offering some
+                            excellent computer courses.
+                        </blockquote>
+                        <h3>Sir imtiaz Ahmed <span>Master in english</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="profile">
+                        <img src="img/shela.jpg" alt="" class="user">
+                        <blockquote>Let us take you into a deeper experience, make a moment a lasting conveyable memory.
+                            Let us help build your tribe.Website without visitors is like a ship lost in the horizon.
+                        </blockquote>
+                        <h3>miss aysha <span>Web developer</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="profile">
+                        <img src="img/ssaif.jpg" alt="" class="user">
+                        <blockquote>Learning HTML ,CSS, javascript, is a lot more challenging than it used to be.
+                            Responsive web
+                            to design and develop websites.
+                        </blockquote>
+                        <h3>Engr Saifullah <span>Bs in telecommunication</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------get in touch---------------------------- -->
+    <div>
+        <section id="contact">
+            <div class="container">
+                <h1>Get In Touch</h1>
+
+                <!-- <h6>Send a message and we will get back to you within 24 hours.</h6> -->
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <form class="contact-form" action="https://formsubmit.co/saifkhantbi@gmail.com" method="POST">
+                            <h5 class="sendmsg">Send a message and we will get back to you within 24 hours.</h5>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="your name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="number" name="number" class="form-control"
+                                    placeholder="phone no." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email Id"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="4"
+                                    placeholder="Type message"></textarea>
+                            </div>
+                            <button type="submit" class="btnsend ">
+                                Send message>
+                            </button>
+                        </form>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.745384794627!2d66.9982941149864!3d24.94074234817752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3400223216783%3A0xb3d1243b9c683cae!2sThe%20British%20Institute!5e0!3m2!1sen!2s!4v1614157037656!5m2!1sen!2s"
+                                width="340" height="410" style="border:0; border-radius: 5%;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 contact-info">
+                        <div>
+                            <div class="follow"><b>Address:</b><i class="fa fa-map-marker"></i>
+
+                                Orangi Town, Sector 5,
+                                Adjacent TELENOR Franchise,
+                                Nearby ZMC Rd First Floor, Karachi, Sindh, Pakistan-7580075800
+
+                            </div>
+
+                            <div class="follow"><b>Phone:</b><i class="fa fa-phone"></i>+92-311 2372524
+                            </div>
+                            <div class="follow"><b>Email:</b><i class="fa fa-envelope"></i>imtiazahmed7712@gmail.com
+                            </div>
+                            <div class="follow"><label for=""></label><b>Get Social:</b></label>
+                                <a href="https://www.facebook.com/profile.php?id=100005061797125"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
+                                <a
+                                    href="https://www.youtube.com/channel/UC8EYT9TgBufru6OGRVFZ7oA/videos?view=0&sort=dd&shelf_id=1&view_as=subscriber"><i
+                                        class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <!-- -------------------------footer----------------------- -->
+    <section id="footer">
+        <div class="container text-center">
+            <p>Thank you for visiting our website The british institute<i class="fa fa-heart"></i></p>
+        </div>
+    </section>
+    <!-- ----------------------------------smooth scroll--------------------------------- -->
+    <script src="smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <!-- ---------------------------------------footer------------------------------------------ -->
+
+    <!-- <section id="link">
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Head Office<br>
+            A-25, Bahadurabad Chowrangi Karachi, Pakistan
+        </h3>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>UAN: 111-729-526</p>
+            <i class="fa fa-phone"></i>
+            <p>UAN: 111-729-526</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>CELL: 92-311-1729526</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>USA NO +1(716)941 7792</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>UK NO (+44)115 970 6256</p>
+        </div>
+    
+    </div>
+
+    <div class="footer-center">
+        
+        
+            <div class="Useful">
+                <h2>Useful Links</h2>
+            </div>
+        
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            Contact With Us</p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+<div class="alert">
+    <p>Copyright © 2020 Saylani Welfare</p>
+  </div>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

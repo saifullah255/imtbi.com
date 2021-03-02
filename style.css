@@ -1,0 +1,738 @@
+
+
+/*-------navigationbar-------*/
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+#nave-bar{
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand img
+{
+    width: 140px;
+    height: 49px;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px 10px 12px 4px;
+
+}
+
+
+.navbar-nav li
+{
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.navbar-nav li a
+ {
+    float: right;
+    text-align: center;
+    
+}
+
+#nave-bar ul li a:hover{
+
+color: white!important;
+}
+
+.navbar{
+    background-color: rgb(75, 124, 77);
+}
+
+.navbar-toggler{
+    border: none!important;
+}
+
+.nav-link{
+    color: black!important;
+    font-weight: 700;
+    font-size: 16px ;
+}
+
+
+.login{
+    background-color: #4CAF50;
+    color: black;
+    /* width: 100px; */
+    margin-left: 30px;
+    padding: 0 10px !important;
+    text-align: center !important;
+    border-top: 8px solid skyblue !important;
+    border-bottom: steelblue 8px solid !important;
+    border-left: 8px solid yellow !important;
+    border-right: 8px solid blueviolet !important;
+    border-radius: 30px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+/* -----slider----- */
+
+#------slider-----{
+    width: 100%;
+
+}
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    /* bottom: initial !important; */
+
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    
+    padding: 20px;
+}
+.d-block{
+    height: 700px !important;
+}
+.carousel-caption h5{
+    color: white;
+    font-size: 42px;
+    padding-top: 400px;
+}
+
+/* -----------about---------------- */
+#about{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+}
+#about .btn
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.about-content{
+    padding-top: 20px;
+
+}
+
+.skills-bar p
+{
+    margin-bottom: 6px;
+    font-weight: 600;
+
+}
+.progress-bar
+{
+    border-radius: 16px;
+
+}
+.progress
+{
+    border-radius: 16px! important;
+    margin-bottom: 20px;
+}
+/* ---------------------services--------------------- */
+#services{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(https://postmediaottawacitizen2.files.wordpress.com/2019/06/66054696-12982102-w.jpg);
+    background-size: cover;
+    background-position: center;
+    color: rgb(248, 244, 241);
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#services h1{
+    text-align: center;
+    color: rgb(245, 238, 240)!important;
+    padding-bottom: 10px;
+}
+#services h1::after
+{
+    content: '';
+    background:rgb(245, 242, 239);
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+    
+}
+.services{
+    margin-top: 40px;
+
+}
+.icon
+{
+    font-size: 40px;
+    margin: 20px auto;
+    padding: 20px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid rgb(248, 243, 244);
+    border-radius: 50%;
+}
+
+#services p 
+{
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.services .col-md-3:hover
+{
+    background: gray;
+    cursor: pointer;
+    transition: 0.7s;
+} 
+
+/* -----------team members----------- */
+
+
+
+#team{
+    padding-top:  50px;
+    padding-bottom: 50px;
+    color: #555;
+    background-color: whitesmoke !important;
+}
+h1
+{
+    text-align: center;
+    color: #555;
+    padding-bottom: 10px;
+}
+h1::after
+{
+    content: '';
+    background: skyblue;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+
+.profile-pic{
+    margin-top: 25px;
+}
+.profile-pic .img-box
+{
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+.profile-pic .img-box img
+{
+    filter: grayscale(1);
+}
+.profile-pic .img-box img:hover
+{
+    filter: grayscale(0);
+    cursor: pointer;
+}
+.profile-pic h2
+{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #007bff;
+
+}
+.profile-pic h3
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+   
+
+}
+#team .fa
+{
+     height: 25px;
+     width: 25px;
+     color: #007bff;
+     padding: 4px;
+     border-radius: 50%;
+}
+.img-box ul
+{
+    padding: 15px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+ 
+.img-box ul li
+{
+    padding: 5px;
+   display: inline-block;
+
+}
+
+.img-box:hover ul
+{
+    opacity: 1;
+
+}
+
+.img-box ul, .img-box ul li
+{
+    transition: 0.5s;
+
+}
+
+/* ------------promo------------------ */
+#promo{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/promo.JPG);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 100px;
+    font-family: sans-serif;
+    font-size: 38px;
+}
+
+/* -------price plans------ */
+#price{
+    padding: 40px 0;
+    background: whitesmoke !important;
+}
+
+.single-price{
+    margin: 10px auto;
+    display: inline;
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.single-price:hover
+{
+    box-shadow: 0 2px 20px #333;
+}
+.price-head
+{
+    background-color: #2196f3;
+    display: inline;
+    float: left;
+    padding: 10px 5px;
+    text-align: center;
+    width: 100%;
+}
+.price-head h2
+{
+    color: #fff;
+    font-size: 30px;
+     font-weight: bold;
+      margin-bottom: 5px;
+      padding: 5px;
+      text-transform: uppercase;
+}
+
+.price-head p
+{
+    font-size: 25px;
+    color: #ccc;
+    font-weight: bold;
+    line-height: 30px;
+}
+#price span
+{
+    font-size: 15px;
+}
+.Price-content
+{
+    display: inline;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+}
+.Price-content ul li
+{
+      border-bottom: 1px solid #efefef;
+      padding: 15px 10px;
+      list-style: none;
+
+}
+ul li :last-child
+{
+    border: none;
+}
+.fa-check-circle
+{
+    color: green;
+    margin-right: 10px;
+    font-size: 20px; 
+}
+.fa-times-circle
+{
+    color: red;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.Price-button
+{
+    display: inline;
+    float: left;
+    padding: 15px 15px 30px;
+    text-align: center;
+    width: 100%;
+}
+.buy-btn
+{
+    background-color: #2196f3;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px 50px;
+    transition: 0.5px;
+
+}
+.buy-btn:hover
+{
+      border-color: 1px solid #fff;
+      background-color: #0824af;
+}
+a
+{
+    text-decoration: none;
+    color: #fff;
+}
+/* ---------------------------testimonials------------------------------------ */
+#testimonails{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: teal !important;
+}
+#testimonails .row
+{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.col-md-4{
+    margin: 40px auto;
+}
+.profile{
+    padding: 70px 10px 10px;
+    background-color: #efefef;
+}
+.user{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.profile img{
+    top: -60px;
+    position: absolute;
+    left: calc(50% - 60px);
+    border: 10px solid #fff;
+}
+.profile h3{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #007bff;
+}
+#testimonails,span
+{
+    font-size: 12px;
+    color: #333;
+}
+blockquote{
+    font-size: 16px;
+    line-height: 30px;
+
+}
+ blockquote::before{
+    content: "\93";
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 20px;
+    bottom: -15px;
+    right: 5px;
+    
+}
+blockquote::after{
+    content: "\94";
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 10px;
+    bottom: -15px;
+    left: 5px;
+}
+.profile:hover{
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* ------------------------get in touch----------------------- */
+#contact{
+    background-color: rgb(121, 194, 123);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: black;
+}
+.contact-form{
+    padding: 5px;
+}
+.form-control{
+    border-radius: 4px !important;
+    border: none !important;
+}
+::placeholder{
+    color: #999 !important;
+}
+.follow{
+    background-color: #fff;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px !important;
+
+}
+ #contact .contact-info .fa{
+     margin: 10px;
+     color: rgb(77, 55, 6);
+     font-weight: bold;
+     font-size: 24px;
+ }
+
+ 
+
+ .sendmsg{
+     color: rgb(102, 4, 4);
+ }
+ .btnsend, button, .btnmore, .btncontact{
+    font-weight: bold;
+    padding:  14px;
+     margin: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff ;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  button:hover {
+      background-color: #323232
+    }
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+.btn{
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; 
+    padding: 10px;
+    margin: 20px;
+}
+
+
+.follow i:hover{
+    transform: translateY(-10px);
+    transition: .8s;
+    border-radius: 20%;
+    color: black !important;
+    background-color: #3e8e41;
+}
+/*-------------------footer------------------------- */
+#footer{
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+}
+.fa-heart{
+    margin: 3px;
+    color: red;
+}
+
+/* ------------------responsive footer--------------- */
+
+*{
+	padding:0;
+	margin:0;
+}
+ 
+html{
+	background-color: #eaf0f2;
+}
+ 
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+ 
+header{
+	text-align: center;
+	padding-top: 100px;
+	/* margin-bottom:190px; */
+}
+
+/* The footer is fixed to the bottom of the page */
+ 
+footer{
+	position: fixed;
+	bottom: 0;
+}
+ 
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+ 
+ 
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	/* margin-top: 80px; */
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+/* Footer left */
+.footer-distributed p{
+	display: inline-block;
+	color:silver;
+	vertical-align: middle;
+    margin:5px;
+    font-size: 12px;
+}
+.footer-distributed  a{
+	color:  silver;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-left{
+	width: 30%;
+}
+ 
+.footer-distributed h3{
+	color:  silver;
+    margin: 5px;
+    font-size: 12px;
+}
+
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.Useful h2{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+    
+
+.Useful h2::after
+{
+    content: '';
+    background:blue;
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 10px auto 5px;
+    
+}
+ 
+ 
+
+ 
+.footer-distributed  a{
+	color:  silver;
+	text-decoration: none;;
+}
+ 
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right{
+    width: 30%;
+    /* margin-left: 50px; */
+}
+ 
+ 
+.footer-distributed .footer-icons{
+	margin-top: 10px;
+}
+ 
+  
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 40px;
+    height: 40px;
+    margin: 5px;
+	cursor: pointer;
+	background-color: #3b5998;
+	border-radius: 100%;
+ 
+	font-size: 15px;
+	color: #ffffff;
+	text-align: center;
+    line-height: 50px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+} 
+
+ 
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+ 
+ 
+ @media (max-width: 880px) {
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+ 
+}
+/* ---------------------end---------------- */
+.alert{
+    color: white;
+    background-color: #3b5998;
+}
+.alert p{
+    font-size: 10px;
+    margin-left: 150px;
+}
+
+ 
+ 
+
+ 
